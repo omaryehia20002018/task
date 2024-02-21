@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="#" th:action="@{/api/course/s}" th:object="${course}" method="GET">
+       course title <input type="text" th:field="*{title}"placeholder="please enter course title">
+        <br>
+        instructor id <input type="text" th:field="*{teacher.id}"placeholder="please enter instructor id">
+        <br>
+        <button type="submit">
+            save
+        </button>
+    </form>
+</body>
+</html>

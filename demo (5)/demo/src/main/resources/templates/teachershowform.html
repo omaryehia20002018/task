@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form action="#" th:action="@{/api/teacher/s}" th:object="${course}" method="GET">
+    teacher first name <input type="text" th:field="*{FirstName}"placeholder="please enter firstname">
+    <br>
+    teacher last name <input type="text" th:field="*{LastName}"placeholder="please enter lastname">
+    <br>
+     teacher salary <input type="text" th:field="*{salary}"placeholder="please enter salary">
+     <br>
+     teacher code <input type="text" th:field="*{code}"placeholder="please enter code">
+     <br>
+     teacher age <input type="text" th:field="*{age}"placeholder="please enter instructor id">
+    <button type="submit">
+        save
+    </button>
+ </form>
+</body>
+</html>

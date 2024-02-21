@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table,th,td{
+          border:1px solid
+
+        }
+        table{
+           width:100%;
+           border-collapse:collapse;
+        }
+    </style>
+</head>
+<body>
+<table class="table" >
+    <thead>
+    <tr>
+
+        <th>course title</th>
+        <th>teacher id</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="course:${courses}">
+        <td th:text="${course.title}">
+
+        </td>
+
+        <td  th:text="${course.teacher.firstname}">
+        </td>
+        <td th:text="${course.teacher.lastname}">
+
+        </td>
+
+        <td th:text="${course.teacher.salary}">
+
+        </td>
+
+        <td th:text="${course.teacher.age}">
+
+        </td>
+
+        <td th:text="${course.teacher.code}">
+
+        </td>
+
+
+
+
+
+
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

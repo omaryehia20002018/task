@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .s{
+         color:blue
+        }
+    </style>
+
+</head>
+<body>
+  <form action="#" th:action="@{/api/quiz/su}" th:object="${quiz}" method="GET">
+    quiz name <input type="text" th:field="*{name}"placeholder="please enter quiz name">
+    <br><br>
+    quiz creation date <input type="datetime-local" th:field="*{creationDate}"placeholder="please enter creation date">
+    <br><br>
+      quiz creation date <input type="datetime-local" th:field="*{creationDateTime}"placeholder="please enter creation date time">
+      <br>
+      <br>
+      quiz end date <input type="datetime-local" th:field="*{endDateTime}"placeholder="please enter end date">
+      <br>
+      <br>
+    <button type="submit" class="s">
+        save
+    </button>
+  </form>
+</body>
+</html>
